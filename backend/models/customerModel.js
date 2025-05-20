@@ -17,10 +17,6 @@ const Customer = sequelize.define(
       type: DataTypes.STRING(20),
       allowNull: false,
     },
-    address: { type: DataTypes.STRING },
-    idCard: {
-      type: DataTypes.STRING,
-    },
     idPassport: {
       type: DataTypes.STRING(50),
       allowNull: true,
@@ -36,10 +32,6 @@ const Customer = sequelize.define(
       {
         unique: true,
         fields: ["phone"],
-      },
-      {
-        unique: true,
-        fields: ["idCard"],
       },
     ],
   }

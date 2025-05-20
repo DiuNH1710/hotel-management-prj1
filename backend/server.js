@@ -11,6 +11,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import bookingServiceRoutes from "./routes/bookingServiceRoutes.js";
 import invoiceRoutes from "./routes/invoiceRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,6 +50,16 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/booking-services", bookingServiceRoutes);
 app.use("/api/invoices", invoiceRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    message: "Something went wrong!",
+    error: process.env.NODE_ENV === "development" ? err.message : undefined,
+  });
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

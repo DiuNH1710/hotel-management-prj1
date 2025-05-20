@@ -1,6 +1,7 @@
 import Room from "../models/roomModel.js";
 import upload from "../middlewares/multer.js";
 import path from "path";
+import fs from "fs";
 
 // Lấy danh sách phòng
 export const getAllRooms = async (req, res) => {
@@ -9,6 +10,21 @@ export const getAllRooms = async (req, res) => {
     res.json(rooms);
   } catch (error) {
     console.error("Error fetching rooms:", error);
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Lấy thông tin phòng theo ID
+export const getRoomById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const room = await Room.findByPk(id);
+    if (!room) {
+      return res.status(404).json({ message: "Room not found" });
+    }
+    res.json(room);
+  } catch (error) {
+    console.error("Error fetching room:", error);
     res.status(500).json({ message: error.message });
   }
 };
@@ -61,6 +77,18 @@ export const updateRoom = async (req, res) => {
     const { roomNumber, type, price, status, description } = req.body;
     const image = req.file ? path.basename(req.file.path) : undefined;
 
+    console.log("Received update request:", {
+      id,
+      body: req.body,
+      file: req.file
+        ? {
+            filename: req.file.filename,
+            path: req.file.path,
+            mimetype: req.file.mimetype,
+          }
+        : null,
+    });
+
     const room = await Room.findByPk(id);
     if (!room) {
       return res.status(404).json({ message: "Room not found" });
@@ -78,19 +106,24 @@ export const updateRoom = async (req, res) => {
       }
     }
 
+    // Cập nhật tất cả các trường được gửi lên
     const updateData = {
-      roomNumber,
-      type,
-      price,
-      status,
-      description,
+      roomNumber: roomNumber || room.roomNumber,
+      type: type || room.type,
+      price: price || room.price,
+      status: status || room.status,
+      description: description || room.description,
     };
 
+    // Chỉ cập nhật ảnh nếu có file mới
     if (image) {
       updateData.image = image;
     }
 
+    console.log("Updating room with data:", updateData);
+
     await room.update(updateData);
+    console.log("Room updated successfully:", room.toJSON());
     res.json(room);
   } catch (error) {
     console.error("Error updating room:", error);
