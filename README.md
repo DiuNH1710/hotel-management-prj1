@@ -29,10 +29,10 @@ hotel-management/
 - **Others:** Sequelize (ORM)
 
 ## ⚙️ Getting Started
-
+```bash
 ### 1. Clone the Repository
 
-```bash
+
 git clone https://github.com/DiuNH1710/hotel-management-prj1.git
 cd hotel-management-prj1
 2. Set Up the Database (MySQL)
@@ -65,10 +65,13 @@ npm run dev
 
 The frontend will run at http://localhost:5173.
 ```
-
 ## 📷 Screenshots
-🏠 Home Page
-![image](https://github.com/user-attachments/assets/33c560a3-78f3-4127-9706-be75ad58d475)
+### 🏠 Home Page
+![homepage](./images/homepage.png)
+
+### 📋 Booking Module
+![addbooking](./images/addbooking.png)  
+![bookinglist](./images/bookinglist.png)
 
 ## 🧪 Future Improvements
 Unit testing with Jest and React Testing Library
