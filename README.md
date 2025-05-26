@@ -8,6 +8,9 @@ hotel-management/
 ├── backend/ # Node.js + Express backend (with MySQL)
 └── frontend/ # React.js frontend
 ![image](https://github.com/user-attachments/assets/33c560a3-78f3-4127-9706-be75ad58d475)
+.images/homepage.png
+
+
 
 
 ## 🚀 Features
@@ -63,9 +66,9 @@ npm run dev
 The frontend will run at http://localhost:5173.
 
 ## 📸 Screenshots & Demonstration Steps
-Home Module
 
-![image](https://github.com/user-attachments/assets/ae94d1b1-2027-40a4-a0ba-cbc6b14cae4b)
+![Home UI](./images/homepage.png)
+![Services UI](./images/services_module.png)
 
 Booking Module
 ![image](https://github.com/user-attachments/assets/9207e663-74d2-4af4-8e74-f4e1e46566eb)
