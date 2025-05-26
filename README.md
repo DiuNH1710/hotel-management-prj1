@@ -7,7 +7,8 @@ A full-stack hotel management system built with **Node.js** for the backend and 
 hotel-management/
 ├── backend/ # Node.js + Express backend (with MySQL)
 └── frontend/ # React.js frontend
-![image](https://github.com/user-attachments/assets/33c560a3-78f3-4127-9706-be75ad58d475)
+
+![homepage](./images/homepage.png)
 
 
 
@@ -72,6 +73,27 @@ The frontend will run at http://localhost:5173.
 ### 📋 Booking Module
 ![addbooking](./images/addbooking.png)  
 ![bookinglist](./images/bookinglist.png)
+
+### 👤 Customer Module
+![addcustomer](./images/addcustomer.png)  
+![customerlist](./images/customerlist.png)
+
+### 👨‍💼 Employee & Work Schedules Module
+![employeelist](./images/employeelist.png)  
+![addworkschedules](./images/addworkschedules.png)  
+![workschedulelist](./images/workschedulelist.png)
+
+### 🧾 Invoice Module
+![invoicedetail](./images/invoicedetail.png)  
+![invoicelist](./images/invoicelist.png)
+
+### 🛏️ Room Module
+![addroom](./images/addroom.png)  
+![roomlist](./images/roomlist.png)
+
+### 🧰 Services Module
+![addservice](./images/addservice.png)  
+![servicelist](./images/servicelist.png)
 
 ## 🧪 Future Improvements
 Unit testing with Jest and React Testing Library
