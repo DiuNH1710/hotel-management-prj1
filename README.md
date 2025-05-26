@@ -64,6 +64,7 @@ The frontend will run at http://localhost:5173.
 
 ## 📸 Screenshots & Demonstration Steps
 Home Module
+
 ![image](https://github.com/user-attachments/assets/ae94d1b1-2027-40a4-a0ba-cbc6b14cae4b)
 
 Booking Module
