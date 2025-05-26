@@ -2,12 +2,10 @@ import Employee from "../models/employeeModel.js";
 import WorkSchedule from "../models/workScheduleModel.js";
 import { Op } from "sequelize";
 
-// Tạo mới một nhân viên
 export const createEmployee = async (req, res) => {
   try {
     const { name, phone, position, salary, email } = req.body;
 
-    // Kiểm tra dữ liệu đầu vào
     if (!name || !phone || !position || !salary) {
       return res.status(400).json({ message: "Missing required fields" });
     }
@@ -30,7 +28,7 @@ export const createEmployee = async (req, res) => {
   }
 };
 
-// Lấy danh sách tất cả nhân viên
+// Get all employees
 export const getAllEmployees = async (req, res) => {
   try {
     const employees = await Employee.findAll();
@@ -83,19 +81,19 @@ export const deleteEmployee = async (req, res) => {
       return res.status(404).json({ message: "Employee not found" });
     }
 
-    // Kiểm tra xem nhân viên có lịch làm việc không
+    // check if the employee has associated work schedules
     const workSchedules = await WorkSchedule.findAll({
       where: { employee_id: id },
     });
 
     if (workSchedules.length > 0) {
-      // Xóa tất cả lịch làm việc của nhân viên
+      // delete associated work schedules
       await WorkSchedule.destroy({
         where: { employee_id: id },
       });
     }
 
-    // Xóa nhân viên
+    // delete the employee
     await employee.destroy();
 
     res.json({

@@ -2,27 +2,27 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 
-// Đảm bảo thư mục uploads tồn tại
+// ensure the uploads directory exists
 const uploadDir = "uploads";
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Cấu hình storage để lưu file vào thư mục uploads
+// configure multer storage
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
-    // Tạo tên file duy nhất bằng cách thêm timestamp
+    // create a unique filename using current timestamp and random number
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     cb(null, uniqueSuffix + path.extname(file.originalname));
   },
 });
 
-// Kiểm tra file type
+//check if the file is an image
 const fileFilter = (req, file, cb) => {
-  // Chỉ chấp nhận các file ảnh
+  // only accept image files
   if (file.mimetype.startsWith("image/")) {
     cb(null, true);
   } else {
@@ -34,7 +34,7 @@ const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 5 * 1024 * 1024, // Giới hạn kích thước file 5MB
+    fileSize: 5 * 1024 * 1024, // limits file size to 5MB
   },
 });
 

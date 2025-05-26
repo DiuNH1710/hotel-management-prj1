@@ -3,7 +3,7 @@ import upload from "../middlewares/multer.js";
 import path from "path";
 import fs from "fs";
 
-// Lấy danh sách phòng
+// get all rooms
 export const getAllRooms = async (req, res) => {
   try {
     const rooms = await Room.findAll();
@@ -14,7 +14,7 @@ export const getAllRooms = async (req, res) => {
   }
 };
 
-// Lấy thông tin phòng theo ID
+// get room by ID
 export const getRoomById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -29,7 +29,7 @@ export const getRoomById = async (req, res) => {
   }
 };
 
-// Tạo phòng mới
+// create a new room
 export const addRoom = async (req, res) => {
   try {
     const { roomNumber, type, price, status, description } = req.body;
@@ -70,7 +70,7 @@ export const addRoom = async (req, res) => {
   }
 };
 
-// Cập nhật phòng theo ID
+// update room by ID
 export const updateRoom = async (req, res) => {
   try {
     const { id } = req.params;
@@ -106,7 +106,7 @@ export const updateRoom = async (req, res) => {
       }
     }
 
-    // Cập nhật tất cả các trường được gửi lên
+    // update only the fields that are provided
     const updateData = {
       roomNumber: roomNumber || room.roomNumber,
       type: type || room.type,
@@ -115,7 +115,7 @@ export const updateRoom = async (req, res) => {
       description: description || room.description,
     };
 
-    // Chỉ cập nhật ảnh nếu có file mới
+    // If an image is provided, update the image field
     if (image) {
       updateData.image = image;
     }
@@ -134,7 +134,7 @@ export const updateRoom = async (req, res) => {
   }
 };
 
-// Xóa phòng theo ID
+// delete room by ID
 export const deleteRoom = async (req, res) => {
   try {
     const { id } = req.params;

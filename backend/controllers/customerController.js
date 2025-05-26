@@ -20,7 +20,6 @@ export const createCustomer = async (req, res) => {
   }
 };
 
-// Lấy toàn bộ danh sách customer
 export const getAllCustomers = async (req, res) => {
   try {
     const customers = await Customer.findAll();
