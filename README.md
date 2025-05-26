@@ -65,6 +65,11 @@ npm run dev
 
 The frontend will run at http://localhost:5173.
 
+## 📷 Screenshot
+
+![Home UI](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png)
+
+
 ## 📸 Screenshots & Demonstration Steps
 
 ![Home UI](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png)
