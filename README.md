@@ -67,7 +67,8 @@ The frontend will run at http://localhost:5173.
 
 ## 📸 Screenshots & Demonstration Steps
 
-![Home UI]([./images/homepage.png](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png))
+![Home UI](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png)
+
 
 ![Services UI](./images/services_module.png)
 
