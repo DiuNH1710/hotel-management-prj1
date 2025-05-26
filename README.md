@@ -64,53 +64,11 @@ npm install
 npm run dev
 
 The frontend will run at http://localhost:5173.
+```bash
 
-## 📷 Screenshot
-
-![Home UI](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png)
-
-
-## 📸 Screenshots & Demonstration Steps
-
-![Home UI](https://raw.githubusercontent.com/DiuNH1710/hotel-management-prj1/main/images/homepage.png)
-
-
-
-![Services UI](./images/services_module.png)
-
-Booking Module
-![image](https://github.com/user-attachments/assets/9207e663-74d2-4af4-8e74-f4e1e46566eb)
-
-![image](https://github.com/user-attachments/assets/6d74e6fc-f72a-48bf-b63b-8ce687899085)
-
-Customer Module
-![image](https://github.com/user-attachments/assets/74bd195c-1260-40bd-8441-23087a43eecd)
-
-![image](https://github.com/user-attachments/assets/dc49ef52-24d8-4820-83f0-d4dfe14c9746)
-
-Employee Module & work schedules Module
-![image](https://github.com/user-attachments/assets/7c4ff469-d4d2-47dc-80be-8c63e35cb2c6)
-
-![image](https://github.com/user-attachments/assets/cf929e83-8f27-498e-8c81-ae84dc672c11)
-
-![image](https://github.com/user-attachments/assets/eb90bcbc-52b3-4f83-826f-f6bc61f1f2f0)
-
-Invoices Module
-![image](https://github.com/user-attachments/assets/c32206b4-d2a2-4d2f-913e-50258a28c777)
-
-![image](https://github.com/user-attachments/assets/82761f75-c32f-4b9d-833b-d410891693af)
-
-Room Module
-![image](https://github.com/user-attachments/assets/0f8defd2-9e8c-4564-9466-01a0e76bc931)
-
-![image](https://github.com/user-attachments/assets/cff82115-3cab-46c3-a803-366c4986655d)
-
-Services Module
-![image](https://github.com/user-attachments/assets/a6bdbfaf-d91f-4589-8bd5-ec25c4468db7)
-
-![image](https://github.com/user-attachments/assets/bc8b4f8d-dd18-4824-a367-aa98454d8fb6)
-
-
+📷 Screenshots
+🏠 Home Page
+![image](https://github.com/user-attachments/assets/33c560a3-78f3-4127-9706-be75ad58d475)
 
 🧪 Future Improvements
 Unit testing with Jest and React Testing Library
