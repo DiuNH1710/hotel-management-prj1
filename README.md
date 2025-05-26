@@ -64,13 +64,13 @@ npm install
 npm run dev
 
 The frontend will run at http://localhost:5173.
-```bash
+```
 
-📷 Screenshots
+## 📷 Screenshots
 🏠 Home Page
 ![image](https://github.com/user-attachments/assets/33c560a3-78f3-4127-9706-be75ad58d475)
 
-🧪 Future Improvements
+## 🧪 Future Improvements
 Unit testing with Jest and React Testing Library
 
 CI/CD with GitHub Actions
@@ -83,5 +83,5 @@ PWA support for offline usage
 
 Internationalization with react-i18next
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License.
